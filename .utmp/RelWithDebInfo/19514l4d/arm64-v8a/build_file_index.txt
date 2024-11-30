@@ -1,0 +1,3 @@
+A:\Projetos\Projetos Unity\O Corre de Enzo\O corre de Enzo\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+A:\Projetos\Projetos Unity\O Corre de Enzo\O corre de Enzo\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\FramePacing\CMakeLists.txt
+A:\Projetos\Projetos Unity\O Corre de Enzo\O corre de Enzo\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
