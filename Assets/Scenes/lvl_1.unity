@@ -8789,6 +8789,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &366066339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 670800890423338099, guid: dc2f1cef706f41e4eb702361867959c8, type: 3}
+  m_PrefabInstance: {fileID: 7884100577704538778}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &391416322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12633,6 +12638,10 @@ PrefabInstance:
       propertyPath: rightButton
       value: 
       objectReference: {fileID: 611906825}
+    - target: {fileID: 2895423809581871864, guid: 48957c96ddfa2ad48bf3ef7190ea4202, type: 3}
+      propertyPath: onScreenControls
+      value: 
+      objectReference: {fileID: 366066339}
     - target: {fileID: 4664833804974928469, guid: 48957c96ddfa2ad48bf3ef7190ea4202, type: 3}
       propertyPath: m_Name
       value: Player
@@ -13663,11 +13672,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3919329053276599926, guid: dc2f1cef706f41e4eb702361867959c8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 21.999987
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3919329053276599926, guid: dc2f1cef706f41e4eb702361867959c8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -22.999992
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3919329053276599926, guid: dc2f1cef706f41e4eb702361867959c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
