@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+
+public class Player : MonoBehaviour
 {
 
     public float Speed;
@@ -40,42 +42,24 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A) || moveLeft) 
+
+        if (Keyboard.current.leftArrowKey.isPressed || Keyboard.current.aKey.isPressed || moveLeft) 
         { 
             Move(-1); 
         } 
-        else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) || moveRight) 
-        { 
-            Move(1); 
+        else if (Keyboard.current.rightArrowKey.isPressed || Keyboard.current.dKey.isPressed || moveRight) 
+        {
+            Move(1);
         } 
         else 
         { 
-            Move(0);
-        }
-
-        if (Input.GetButtonDown("Jump"))
+            Move(0); 
+        } 
+        if (Keyboard.current.spaceKey.wasPressedThisFrame) 
         {
             Jump();
         }
-        */
-        if (moveLeft) 
-        { 
-            Move(-1); 
-        } 
-        else if (moveRight) 
-        { 
-            Move(1); 
-        } 
-        else 
-        { 
-            Move(0);
-        }
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            Jump();
-        }
+        
     }
 
     public void FixedUpdate(){
