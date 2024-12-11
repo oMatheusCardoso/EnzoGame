@@ -9907,6 +9907,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc2f1cef706f41e4eb702361867959c8, type: 3}
+--- !u!1 &801247877 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 670800890423338099, guid: dc2f1cef706f41e4eb702361867959c8, type: 3}
+  m_PrefabInstance: {fileID: 801247876}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &805488747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13740,6 +13745,10 @@ PrefabInstance:
       propertyPath: rightButton
       value: 
       objectReference: {fileID: 357784562}
+    - target: {fileID: 2895423809581871864, guid: 48957c96ddfa2ad48bf3ef7190ea4202, type: 3}
+      propertyPath: onScreenControls
+      value: 
+      objectReference: {fileID: 801247877}
     - target: {fileID: 4664833804974928469, guid: 48957c96ddfa2ad48bf3ef7190ea4202, type: 3}
       propertyPath: m_Name
       value: Player

@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+
+public class Player : MonoBehaviour
 {
 
     public float Speed;
@@ -10,6 +12,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public bool isJumping;
     public bool doubleJump;
     public AudioSource jumpSound;
+    public GameObject onScreenControls;
 
     public Button leftButton;
     public Button rightButton;
@@ -22,6 +25,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     bool isBlowing;
     bool onTrampoline;
+    bool controlsActive = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,17 +39,30 @@ public class NewMonoBehaviourScript : MonoBehaviour
         AddEventTrigger(rightButton.gameObject, EventTriggerType.PointerDown, () => moveRight = true);
         AddEventTrigger(rightButton.gameObject, EventTriggerType.PointerUp, () => moveRight = false);
         jumpButton.onClick.AddListener(Jump);
+        onScreenControls.SetActive(controlsActive);
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A) || moveLeft) 
+
+        if (Keyboard.current.anyKey.wasPressedThisFrame)
+        {
+            controlsActive = false; 
+            onScreenControls.SetActive(controlsActive);
+        }
+
+        if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
+        {
+            controlsActive = true; 
+            onScreenControls.SetActive(controlsActive);
+        }
+
+        if (Keyboard.current.leftArrowKey.isPressed || Keyboard.current.aKey.isPressed || moveLeft) 
         { 
             Move(-1); 
         } 
-        else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) || moveRight) 
+        else if (Keyboard.current.rightArrowKey.isPressed || Keyboard.current.dKey.isPressed || moveRight) 
         { 
             Move(1); 
         } 
@@ -54,28 +71,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
             Move(0);
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             Jump();
         }
-        */
-        if (moveLeft) 
-        { 
-            Move(-1); 
-        } 
-        else if (moveRight) 
-        { 
-            Move(1); 
-        } 
-        else 
-        { 
-            Move(0);
-        }
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            Jump();
-        }
+        
     }
 
     public void FixedUpdate(){

@@ -179,10 +179,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
-  JumpForce: 9
+  JumpForce: 9.3
   isJumping: 0
   doubleJump: 0
   jumpSound: {fileID: 2150449397704805827}
+  onScreenControls: {fileID: 0}
   leftButton: {fileID: 0}
   rightButton: {fileID: 0}
   jumpButton: {fileID: 0}

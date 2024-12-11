@@ -7942,6 +7942,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &277167805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 670800890423338099, guid: dc2f1cef706f41e4eb702361867959c8, type: 3}
+  m_PrefabInstance: {fileID: 277167800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &325081531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7996528717429294684, guid: 241209e89088e954ebcd30d284a52953, type: 3}
@@ -13296,6 +13301,10 @@ PrefabInstance:
       propertyPath: rightButton
       value: 
       objectReference: {fileID: 277167802}
+    - target: {fileID: 2895423809581871864, guid: 48957c96ddfa2ad48bf3ef7190ea4202, type: 3}
+      propertyPath: onScreenControls
+      value: 
+      objectReference: {fileID: 277167805}
     - target: {fileID: 4664833804974928469, guid: 48957c96ddfa2ad48bf3ef7190ea4202, type: 3}
       propertyPath: m_Name
       value: Player
